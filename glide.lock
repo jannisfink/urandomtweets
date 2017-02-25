@@ -1,0 +1,24 @@
+hash: 520e0212c8ba5f006f642cc41d51f5080fa7b3e09fdb7795b360244c15a5c7f9
+updated: 2017-02-25T02:02:37.2774641+01:00
+imports:
+- name: github.com/BurntSushi/toml
+  version: bbd5bb678321a0d6e58f1099321dfa73391c1b6f
+- name: github.com/cenkalti/backoff
+  version: b02f2bbce11d7ea6b97f282ef1771b0fe2f65ef3
+- name: github.com/dghubble/go-twitter
+  version: fc93bb35701bb85903d17daa80a21a824b9c592f
+  subpackages:
+  - twitter
+- name: github.com/dghubble/oauth1
+  version: 70562a5920ad9b6ff03ef697c0f90ae569abbd2b
+- name: github.com/dghubble/sling
+  version: 91b015f8c5e231605ed75a74130ca0fa48b28cb1
+- name: github.com/google/go-querystring
+  version: 53e6ce116135b80d037921a7fdd5138cf32d7a8a
+  subpackages:
+  - query
+- name: golang.org/x/net
+  version: 10c134ea0df15f7e34d789338c7a2d76cc7a3ab9
+  subpackages:
+  - context
+testImports: []
