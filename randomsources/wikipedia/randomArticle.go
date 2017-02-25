@@ -10,7 +10,12 @@ import (
 
 const wikipediaRandomPageRedirect = "https://en.wikipedia.org/wiki/Special:Random"
 
-func SelectRandomWikipediaArticleTitle() randomsources.RandomInformation {
+var wikipediaHashtags = []string{
+	"wikipedia",
+	"random",
+}
+
+func SelectRandomWikipediaArticle() randomsources.RandomInformation {
 	resp, err := http.Get(wikipediaRandomPageRedirect)
 	if err != nil {
 		log.Fatal("error during http get")
@@ -29,5 +34,6 @@ func SelectRandomWikipediaArticleTitle() randomsources.RandomInformation {
 	return randomsources.RandomInformation{
 		Title: title,
 		Url: resp.Request.URL.String(),
+		HashTags: wikipediaHashtags,
 	}
 }

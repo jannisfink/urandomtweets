@@ -6,3 +6,10 @@ build:
 
 install:
 	go install
+
+upload:
+	scp ./urandomtweets pi3:/home/pi/urandomtweets/
+
+publish:
+	make rpi
+	make upload

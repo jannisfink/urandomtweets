@@ -26,7 +26,13 @@ func (t *TwitterManager) Connect() {
 }
 
 func (t *TwitterManager) Tweet(info randomsources.RandomInformation) {
-	message := fmt.Sprintf("%s %s", info.Title, info.Url)
+	var hashtags = ""
+
+	for _, hashtag := range info.HashTags {
+		hashtags = fmt.Sprintf("%s #%s", hashtags, hashtag)
+	}
+
+	message := fmt.Sprintf("%s %s %s", info.Title, info.Url, hashtags)
 
 	_, _, err := t.client.Statuses.Update(message, &twitter.StatusUpdateParams{})
 	if err != nil {

@@ -11,7 +11,7 @@ import (
 )
 
 var randomWordGenerators = []func() randomsources.RandomInformation{
-	wikipedia.SelectRandomWikipediaArticleTitle,
+	wikipedia.SelectRandomWikipediaArticle,
 }
 
 func main() {
