@@ -1,11 +1,11 @@
 package wikipedia
 
 import (
-	"net/http"
-	"log"
-	"io/ioutil"
-	"regexp"
 	"github.com/jannisfink/urandomtweets/randomsources"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"regexp"
 )
 
 const wikipediaRandomPageRedirect = "https://en.wikipedia.org/wiki/Special:Random"
@@ -32,8 +32,8 @@ func SelectRandomWikipediaArticle() randomsources.RandomInformation {
 	temp := titleRegex.FindString(stringBody)
 	title := titleRegex.ReplaceAllString(temp, `$1`)
 	return randomsources.RandomInformation{
-		Title: title,
-		Url: resp.Request.URL.String(),
+		Title:    title,
+		Url:      resp.Request.URL.String(),
 		HashTags: wikipediaHashtags,
 	}
 }

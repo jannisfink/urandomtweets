@@ -1,6 +1,6 @@
 package image
 
 type ImageInformation struct {
-	Url string
+	Url    string
 	Origin string
 }

@@ -3,9 +3,9 @@ package config
 import (
 	"github.com/BurntSushi/toml"
 	"log"
-	"path/filepath"
 	"os"
 	"path"
+	"path/filepath"
 )
 
 const configFile = "config.toml"

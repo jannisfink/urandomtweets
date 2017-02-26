@@ -1,7 +1,7 @@
 package randomsources
 
 type RandomInformation struct {
-	Title string
-	Url string
+	Title    string
+	Url      string
 	HashTags []string
 }

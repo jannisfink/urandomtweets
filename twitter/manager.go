@@ -1,12 +1,12 @@
 package twitter
 
 import (
-	"github.com/dghubble/oauth1"
-	"github.com/dghubble/go-twitter/twitter"
-	"log"
-	"github.com/jannisfink/urandomtweets/randomsources"
 	"fmt"
+	"github.com/dghubble/go-twitter/twitter"
+	"github.com/dghubble/oauth1"
 	"github.com/jannisfink/urandomtweets/config"
+	"github.com/jannisfink/urandomtweets/randomsources"
+	"log"
 )
 
 type TwitterManager struct {
@@ -27,7 +27,6 @@ func (t *TwitterManager) Connect() {
 
 func (t *TwitterManager) Tweet(info randomsources.RandomInformation) {
 	var hashtags = ""
-
 	for _, hashtag := range info.HashTags {
 		hashtags = fmt.Sprintf("%s #%s", hashtags, hashtag)
 	}
